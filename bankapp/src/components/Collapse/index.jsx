@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function Collapse({title, content}) { /*parametres titre et contenu */
 
-    const [toggle, setToggle] = useState(false); /*toggle true up et false down */
+    const [toggle, setToggle] = useState(false); 
     return (
         <> 
             <div>

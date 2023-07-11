@@ -3,7 +3,7 @@ export const USER_PROFILE_FAIL = 'USER_PROFILE_FAIL'
 export const USER_PROFILE_RESET = 'USER_PROFILE_RESET'
 export const USER_PROFILE_UPDATE = 'USER_PROFILE_UPDATE'
 
-const INITIAL_STATE = { success: false, userName:'', firstName: '', lastName: '' } //---NEWONE---//
+const INITIAL_STATE = { success: false, userName:'', firstName: '', lastName: '' } 
 
 export const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {

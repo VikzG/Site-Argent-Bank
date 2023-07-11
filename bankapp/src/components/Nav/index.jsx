@@ -11,7 +11,7 @@ function Nav() {
   let navigate = useNavigate()
   const dispatch = useDispatch()
   const { token } = useSelector((state) => state.userLogin)
-  const { firstName } = useSelector((state) => state.userProfile)
+  const { userName } = useSelector((state) => state.userProfile)
 
   const logoutHandler = () => {
     dispatch(logout())
@@ -35,7 +35,7 @@ function Nav() {
                 {token ? (
           <Link className="main-nav-item" to="/profile">
             <FontAwesomeIcon icon={faCircleUser} className="log_icon"/>
-            {firstName}
+            {userName}
           </Link>
                   ) : (
                     ''

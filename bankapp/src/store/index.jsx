@@ -6,7 +6,7 @@ import storage from 'redux-persist/lib/storage'
 import thunk from 'redux-thunk';
 
 
-const persistConfig = {
+const persistConfig = { // permet de garder les infos utilisateur après la fermeture de l'application //
   key: 'root',
   storage,
 }
@@ -18,11 +18,11 @@ const rootReducer = combineReducers({
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;  
 
-const store = legacy_createStore(
+const store = legacy_createStore(          
   persistedReducer,
-  composeEnhancers(applyMiddleware(thunk)),
+  composeEnhancers(applyMiddleware(thunk)), // thunk pour les asyncs //
 )
 
 export const persistor = persistStore(store)
